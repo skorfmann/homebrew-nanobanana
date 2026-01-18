@@ -1,20 +1,20 @@
 class Nanobanana < Formula
   desc "CLI tool for generating images using Google's Gemini API"
   homepage "https://github.com/skorfmann/nanobanana"
-  version "20260118.145857"
+  version "20260118.150006"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/skorfmann/nanobanana/releases/download/#{version}/nanobanana-darwin-arm64"
-      sha256 "a74667f58df2a7b10ea05c1229ad3b33803db331a3f3be3551c098476401755b"
+      sha256 "54b8ab3151f21ff40487ef409a6621143ff66e2c9e3cf0399b4352b0b5602ee3"
 
       def install
         bin.install "nanobanana-darwin-arm64" => "nanobanana"
       end
     else
       url "https://github.com/skorfmann/nanobanana/releases/download/#{version}/nanobanana-darwin-amd64"
-      sha256 "459002cf5ed85678494376c8832ba358d4def01bcfa8cca9ddaf0fa6ef9accf5"
+      sha256 "70faf118aa3ea8dee155ffffdcb240e9357cabe4a3e6cc54b43a37cfef983b99"
 
       def install
         bin.install "nanobanana-darwin-amd64" => "nanobanana"
@@ -25,14 +25,14 @@ class Nanobanana < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/skorfmann/nanobanana/releases/download/#{version}/nanobanana-linux-arm64"
-      sha256 "e675754fd1f45bb9528a2891fa3d5cbb5082072c9a9ef0296306581d5b6bd2b2"
+      sha256 "8e86117e1e09edcc4558333c12bbab2f753447e60364c25b73e75a1b87fabb20"
 
       def install
         bin.install "nanobanana-linux-arm64" => "nanobanana"
       end
     else
       url "https://github.com/skorfmann/nanobanana/releases/download/#{version}/nanobanana-linux-amd64"
-      sha256 "d85aeaf8ff28a656e3c314cf8746de6e3bbbe0462565472c04fcd787697e8de8"
+      sha256 "0ad4ba144a40c2e1e6eebdbf80b24600924b8289d31a661ddbc51858e8267a1c"
 
       def install
         bin.install "nanobanana-linux-amd64" => "nanobanana"
